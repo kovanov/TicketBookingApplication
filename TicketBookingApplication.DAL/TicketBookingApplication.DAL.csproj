@@ -67,6 +67,16 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AirplaneRepository.cs" />
+    <Compile Include="Repositories\CityRepository.cs" />
+    <Compile Include="Repositories\ComfortRepository.cs" />
+    <Compile Include="Repositories\FlightRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\OrderedTicketRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\ProfileRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\TicketRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
