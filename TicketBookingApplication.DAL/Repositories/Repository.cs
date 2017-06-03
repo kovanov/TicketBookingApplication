@@ -34,25 +34,5 @@ namespace TicketBookingApplication.DAL.Repositories
         {
             _context.Entry(item).State = EntityState.Modified;
         }
-        
-        private bool disposedValue = false;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    _context = null;
-                }
-
-                disposedValue = true;
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-        }
     }
 }

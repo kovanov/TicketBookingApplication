@@ -21,5 +21,6 @@ namespace TicketBookingApplication.DAL
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Ticket> Tickets { get; set; }
         public virtual DbSet<OrderedTicket> OrderedTickets { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

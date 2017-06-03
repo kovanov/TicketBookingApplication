@@ -57,6 +57,7 @@
     <Compile Include="Domain\OrderedTicket.cs" />
     <Compile Include="Domain\Profile.cs" />
     <Compile Include="Domain\Ticket.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="Migrations\201706030121516_init.cs" />
     <Compile Include="Migrations\201706030121516_init.Designer.cs">
       <DependentUpon>201706030121516_init.cs</DependentUpon>
@@ -64,6 +65,14 @@
     <Compile Include="Migrations\201706030127547_updated flight.cs" />
     <Compile Include="Migrations\201706030127547_updated flight.Designer.cs">
       <DependentUpon>201706030127547_updated flight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706030548245_ticket.comfortId field added.cs" />
+    <Compile Include="Migrations\201706030548245_ticket.comfortId field added.Designer.cs">
+      <DependentUpon>201706030548245_ticket.comfortId field added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706030558011_user added.cs" />
+    <Compile Include="Migrations\201706030558011_user added.Designer.cs">
+      <DependentUpon>201706030558011_user added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +86,7 @@
     <Compile Include="Repositories\ProfileRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\TicketRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -88,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706030127547_updated flight.resx">
       <DependentUpon>201706030127547_updated flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706030548245_ticket.comfortId field added.resx">
+      <DependentUpon>201706030548245_ticket.comfortId field added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706030558011_user added.resx">
+      <DependentUpon>201706030558011_user added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
