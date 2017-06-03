@@ -21,7 +21,7 @@ namespace TicketBookingApplication.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("AirportDb", throwIfV1Schema: false)
         {
         }
 
