@@ -16,10 +16,7 @@ namespace TicketBookingApplication.Controllers
 
         public ActionResult Search()
         {
-            if (model == null)
-            {
-                
-            }
+           
             return null;
         }
 
