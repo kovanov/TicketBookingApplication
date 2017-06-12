@@ -1,16 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using TicketBookingApplication.BL.Services;
+using TicketBookingApplication.Models;
 
 namespace TicketBookingApplication.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly AirportService _airportService = new AirportService();
+
         public ActionResult Index()
         {
-            return View();
+            var cities = _airportService.Cities;
+            return View(cities);
+        }
+
+        public ActionResult Search(SearchViewModel model)
+        {
+            if (model == null)
+            {
+                
+            }
+            return null;
         }
 
         public ActionResult About()
