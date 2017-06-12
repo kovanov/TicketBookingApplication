@@ -14,7 +14,7 @@ namespace TicketBookingApplication.Controllers
             return View(cities);
         }
 
-        public ActionResult Search(SearchViewModel model)
+        public ActionResult Search()
         {
             if (model == null)
             {
