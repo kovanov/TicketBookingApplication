@@ -7,25 +7,25 @@
             <div class="row">
                 <div class="my-flex-block">
                     <div class="col-md-4">
-                        <select class="form-control shadow"  name="departureCityId" title="City" >
+                        <select class="form-control shadow" name="departureCityId" title="City">
                             <option value="-1">Выберите город отправления</option>
                             @foreach (var city in Model)
-                {
+                            {
                                 <option value="@city.Id">@city.Name</option>
                             }
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select class="form-control shadow" name="arrivalCityId" title="City" >
+                        <select class="form-control shadow" name="arrivalCityId" title="City">
                             <option value="-1">Выберите город прибытия</option>
                             @foreach (var city in Model)
-                {
+                            {
                                 <option value="@city.Id">@city.Name</option>
                             }
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <input id="date" name="departureDate" type="Date" class="form-control" >
+                        <input id="date" name="departureDate" type="Date" class="form-control">
                     </div>
                 </div>
 
