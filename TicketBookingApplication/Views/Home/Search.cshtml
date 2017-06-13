@@ -57,26 +57,36 @@
                                                                 <div class="container">
                                                                     <div class="row">
                                                                         <div class="form-group">
-                                                                            <div class="col-sm-7 col-md-7">
-                                                                                <div class="input-group">
-                                                                                    <div id="radioBtn" class="btn-group">
-                                                                                        <input  class="btn btn-primary btn-sm active" data-toggle="happy" data-title="Y" value="Банковской картой (Visa,MasterCard etc.)">
-                                                                                        <input class="btn btn-primary btn-sm notActive" data-toggle="happy" data-title="N" value="Наличными в кассе">
-                                                                                    </div>
-                                                                                <input type="hidden" name="happy" id="happy">
+                                                                            <div class="btn-group" data-toggle="buttons">
+                                                                                <label class="btn btn-primary active">
+                                                                                    @Html.RadioButton("Pay", "BankCard", true,
+                                                                                       new { id = "IsBankCardPay" }) Банковской картой
+                                                                                </label>
+                                                                                <label class="btn btn-primary">
+                                                                                    @Html.RadioButton("Pay", "Cash",
+                                                                                    new { id = "IsCashPay" }) Наличными в кассе
+                                                                                </label>
                                                                             </div>
+                                                            
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ol>
-                                            </div>
-                                                <div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
-
-                                            </div>
-                                        </div>
+                                                            </a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="container">
+                                                        <div class="row" >
+                                                            <div class="footer" >
+                                                            <button type="button" class="btn btn-info">Купить</button>
+                                                            <button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    </div>
+                                                </div>
                                     </div>
                                 </div>
                             </div>
