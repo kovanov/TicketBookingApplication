@@ -90,4 +90,11 @@ textarea {
     text-align: center;
 }
 
-
+#registerLink {
+    text-decoration: overline;
+    color:black;
+}
+#loginLink {
+    text-decoration: overline;
+    color: black;
+}
