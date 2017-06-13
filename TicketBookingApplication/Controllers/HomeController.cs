@@ -14,10 +14,32 @@ namespace TicketBookingApplication.Controllers
             return View(cities);
         }
 
-        public ActionResult Search()
+        public ActionResult Search(SearchViewModel model)
         {
-           
-            return null;
+            var errorString = string.Empty;
+            if(model.DepartureCityId == -1)
+            {
+                errorString += "Выберите город отправки ";
+            }
+            if(model.ArrivalCityId == -1)
+            {
+                errorString += "Выберите город прибытия";
+            }
+            if(model.DepartureDate == null)
+            {
+                errorString += "Выберите дату";
+            }
+            
+            if(errorString!= string.Empty)
+            {
+                ViewBag.Error = errorString;
+                return View();
+            }
+            else
+            {
+                var fligths =_airportService.FindFlights(model.DepartureCityId, model.ArrivalCityId, model.DepartureDate.Value);
+                return View(fligths);
+            }
         }
 
         public ActionResult About()

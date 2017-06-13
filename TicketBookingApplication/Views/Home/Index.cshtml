@@ -1,21 +1,34 @@
-﻿@model IEnumerable<TicketBookingApplication.BL.Model.CityDTO>
+﻿@model IEnumerable<TicketBookingApplication.DAL.Domain.City>
 
-@using (Html.BeginForm("Search","Home", FormMethod.Get))
-{
-    <select name="departureCityId" title="City">
-        <option value="-1">Выберите город отправления</option>
-        @foreach (var city in Model)
+<div class="container">
+    <div class="row">
+        <h1>&nbsp;</h1>
+        @using (Html.BeginForm("Search", "Home", FormMethod.Get))
         {
-            <option value="@city.Id">@city.Name</option>
+            <div class="col-md-4">
+                <select name="departureCityId" title="City" class="form-control">
+                    <option value="-1">Выберите город отправления</option>
+                    @foreach (var city in Model)
+                {
+                        <option value="@city.Id">@city.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select name="arrivalCityId" title="City" class="form-control">
+                    <option value="-1">Выберите город прибытия</option>
+                    @foreach (var city in Model)
+                    {
+                        <option value="@city.Id">@city.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input name="departuredate" type="date" class="form-control" />
+            </div>
+            <div class="col-md-1">
+                <button type="submit" class="btn btn-default">Поиск</button>
+            </div>
         }
-    </select>
-    <select name="arrivalCityId" title="City">
-        <option value="-1">Выберите город прибытия</option>
-        @foreach (var city in Model)
-        {
-            <option value="@city.Id">@city.Name</option>
-        }
-    </select>
-    <input name="date" type="date" />
-    <button type="submit">Поиск</button>
-}
+    </div>
+</div>

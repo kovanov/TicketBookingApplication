@@ -40,10 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Airplane.cs" />
-    <Compile Include="Model\CityDTO.cs" />
-    <Compile Include="Model\Flight.cs" />
-    <Compile Include="Model\FlightRouteCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AirportService.cs" />
   </ItemGroup>
