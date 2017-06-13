@@ -58,6 +58,7 @@
     <Compile Include="Domain\Profile.cs" />
     <Compile Include="Domain\Ticket.cs" />
     <Compile Include="Domain\User.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Migrations\201706030121516_init.cs" />
     <Compile Include="Migrations\201706030121516_init.Designer.cs">
       <DependentUpon>201706030121516_init.cs</DependentUpon>

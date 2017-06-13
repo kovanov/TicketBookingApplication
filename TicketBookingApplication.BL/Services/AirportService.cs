@@ -8,7 +8,18 @@ namespace TicketBookingApplication.BL.Services
 {
     public class AirportService
     {
-        private readonly UnitOfWork _uow = new UnitOfWork();
+        private readonly IUnitOfWork _uow;
+
+        public AirportService()
+        {
+            _uow = new UnitOfWork();
+        }
+
+        public AirportService(IUnitOfWork unit)
+        {
+            _uow = unit;
+        }
+
         public List<City> Cities
         {
             get => _uow.CityRepository.AllEntities.ToList();
@@ -79,7 +90,7 @@ namespace TicketBookingApplication.BL.Services
                     Profile = profile
                 };
 
-                _uow.UserRepository.Add(user);
+                 _uow.UserRepository.Add(user);
                 _uow.Save();
             }
 
