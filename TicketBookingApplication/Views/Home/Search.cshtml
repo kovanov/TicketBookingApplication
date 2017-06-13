@@ -20,15 +20,20 @@
                 <ul class="list-group">
                     @foreach (var flight in Model)
                     {
-                        <a href="/" style="color:inherit">
-                            <li class="list-group-item">
-                                <h3>Рейс: @flight.DepartureCity.Name - @flight.ArrivalCity.Name</h3>
-                                <hr />
-                                <h4>Время отправки: @flight.DepartureTime.ToString(@"MM\/dd\/yyyy HH:mm")</h4>
-                                <h4>Время прибытия: @flight.ArivalTime.ToString(@"MM\/dd\/yyyy HH:mm")</h4>
-                                <h5>Летим на самолете @flight.Airplane.Name от компании @flight.Airplane.CompanyName</h5>
-                            </li>
-                        </a>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h3>Рейс: @flight.DepartureCity.Name - @flight.ArrivalCity.Name</h3>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-default" style="margin-top:15px;">Заказать билет</button>
+                                </div>
+                            </div>
+                            <hr />
+                            <h4>Время отправки: @flight.DepartureTime.ToString(@"MM\/dd\/yyyy HH:mm")</h4>
+                            <h4>Время прибытия: @flight.ArivalTime.ToString(@"MM\/dd\/yyyy HH:mm")</h4>
+                            <h5>Летим на самолете @flight.Airplane.Name от компании @flight.Airplane.CompanyName</h5>
+                        </li>
                         <h3>&nbsp;</h3>
                     }
                 </ul>
