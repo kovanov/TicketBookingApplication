@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using TicketBookingApplication.DAL.Domain;
 
 namespace TicketBookingApplication.Models
 {
-    public class ListInfoHomeViewModel
+    public class LoginViewModel
     {
-        public IEnumerable<City> Cities { get; set; }
-
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }
